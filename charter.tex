@@ -1,5 +1,5 @@
 \documentclass[11pt]{charter}
-
+\usepackage[section]{placeins}
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Red de sensores WiFi para sistema productivo} 
 
@@ -64,11 +64,8 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                                          & 22/06/2020 \\ \hline
-1.1      & Avances hasta capitulo 6. Desglose de tareas									   & 10/07/2020 \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                                     & dd/mm/aaaa \\ \hline
+1.1      & Avances hasta capítulo 6. Desglose de tareas									   & 10/07/2020 \\ \hline
+1.2      & Se atendieron a las correcciones enviadas el día 14/07/2020                     & 15/07/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -76,7 +73,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 
 
 
-\section{Acta de Constitución del Proyecto}
+\section{Acta de constitución del proyecto}
 \label{sec:acta}
 
 \begin{flushright}
@@ -85,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sensor de fácil configuración e instalación, para el registro de datos ambientales o de procesos específicos, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sensor de fácil configuración e instalación, para el registro de datos ambientales o de procesos específicos, y tendrá un presupuesto preliminar estimado en 640 hs y un costo estimado en xxxx pesos argentinos, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -105,36 +102,32 @@ Se adjunta a esta acta la planificación inicial.
 
 
 
-\section{Descripción técnica-conceptual del Proyecto a realizar}
+\section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
 
 En las PyMEs dedicadas a la industria ceramista, en la mayoría de las situaciones los emprendedores corrigen, a prueba y error, los parámetros de sus procesos productivos en base a los resultados obtenidos de la producción. Las correcciones se realizan según la experiencia propia del emprendedor y en la mayoría de los casos no se realizan registro de las variables del proceso.
 
-Partiendo de la premisa que “Lo que no se puede medir, no se puede mejorar”, se propone un sistema de fácil configuración e instalación, que les permita a estos emprendedores, en un principio, utilizar los criterios formados en la experiencia, y poder darles una base sólida en los datos para poder mejorar de manera continua.
+Partiendo de la premisa que “lo que no se puede medir, no se puede mejorar”, se propone un sistema de fácil configuración e instalación, que les permita a estos emprendedores, en un principio, utilizar los criterios formados en la experiencia, y poder darles una base sólida en los datos para poder mejorar de manera continua.
 
-Este proyecto debe ser de implementación sencilla, por dos motivos.
+Este proyecto debe ser de implementación sencilla, por dos motivos. Primero, no suelen tener un departamento dentro de la PyME dedicado al mantenimiento, pero si personal con conocimientos de electricidad industrial. Segundo, la estructura edilicia de la industria se modifica constantemente. Entonces debe ser un producto que se pueda reinstalar en otro sitio sin mayores inconvenientes.
 
-Primero, no suelen tener un departamento dentro de la PyME dedicado al mantenimiento, pero si personal con conocimientos de electricidad industrial.
+Uno de los desafíos más importantes de este proyecto radica en reducir los costos de implementación, tiene que permitirle a la PyME instalar, desinstalar y reubicar los sensores con recursos propios, sin recurrir a mano de obra especializada.
 
-Segundo, la estructura edilicia de la industria se modifica constantemente.
+El sistema consiste en nodos que se desarrollan en forma genérica y que pueden ser configurados según la necesidad de la PyME. Como se puede ver en la figura \ref{fig:diagBloques}, los nodos son similares, pero pueden tener distintas funciones asignadas, el Nodo 01 sensa temperatura y humedad, el Nodo 02 sensa temperatura y un switch (podría funcionar como contador) y el Nodo 03 tiene un módulo de expansión I2C. De esta manera, si algún Nodo pierde utilidad en el lugar donde se encuentra instalado, puede ser reubicado cambiando su configuración o no.
 
-Entonces debe ser un producto que se pueda reinstalar en otro sitio sin mayores inconvenientes.
 
-Uno de los desafíos mas importantes de este proyecto radica en reducir los costos de implementación, tiene que permitirle a la PyME instalar, desinstalar y reubicar los sensores con recursos propios, sin recurrir a mano de obra especializada.
-
-\vspace{25px}
+\vspace{10px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.68\textwidth]{./Figuras/DiagramaEnBloques.pdf}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
-\vspace{25px}
+\vspace{10px}
 
-El sistema consiste en nodos que se desarrollan en forma genérica y los mismos pueden ser configurados según la necesidad de la PyME, como se puede ver en la figura anterior, los nodos son similares, pero pueden tener distintas funciones asignadas, el Nodo 01 sensa temperatura y humedad, el Nodo 02 sensa temperatura y un switch (podría funcionar como contador) y el Nodo 03 tiene un modulo de expansión I2C. De esta manera si algún Nodo pierde utilidad en el lugar donde se encuentra instalado, puede ser reubicado cambiando su configuración o no.
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -145,20 +138,20 @@ El sistema consiste en nodos que se desarrollan en forma genérica y los mismos 
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & \clientename      & \empclientename	& Gerente  	\\ \hline
-Cliente       & \clientename      & \empclientename	& Gerente  	\\ \hline
-Impulsor      & \clientename      & \empclientename	& Gerente 	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Usuario final & Personal técnico  & PyME           	& -       	\\ \hline
+Rol				& Nombre y Apellido & Organización 		& Puesto 	\\ \hline
+Auspiciante		&					&					&			\\
+Cliente			& \clientename      & \empclientename	& Gerente  	\\ 
+Impulsor		&					&					&			\\	\hline
+Responsable		& \authorname       & FIUBA        		& Alumno 	\\ \hline
+Orientador		& \supname	      	& \pertesupname 	& Director	Trabajo final \\ \hline
+Usuario final	& Personal técnico  & PyME           	& -       	\\ \hline
 \end{tabularx}
 \end{table}
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es brindarle a la PyME un recurso técnico económico para lograr implementar un sistema de seguimiento a su proceso o linea productiva. Que le permita sensar variables de producción y tener los datos disponibles en gráficos actualizados en tiempo real.
+El propósito de este proyecto es brindarle a la PyME un recurso técnico económico para lograr implementar un sistema de seguimiento a su proceso o línea productiva; que le permita sensar variables de producción y tener los datos disponibles en gráficos actualizados en tiempo real.
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
@@ -168,7 +161,7 @@ El desarrollo del presente proyecto incluye:
 \item Análisis, investigación y elección del hardware para el nodo.
 \item Desarrollo de un prototipo de nodo que soporte distintos sensores detallados en los requerimientos.
 \item Desarrollo del firmware del nodo.
-\item Software backend para almacenar los datos de los sensores en una base de datos tipo SQL.
+\item Software \textit{backend} para almacenar los datos de los sensores en una base de datos tipo SQL.
 \item Instalación de una interfaz gráfica estándar para visualización de los datos almacenados en la base de datos.
 \end{itemize}
 
@@ -177,7 +170,7 @@ El proyecto NO incluye:
 \item Desarrollo de una interfaz web o gráfica específica para interactuar con los datos.
 \item Desarrollo de una interfaz gráfica para configuración de los nodos.
 \item Desarrollo de módulos de sensores para el nodo.
-\item En principio no se realizarán pruebas de validación en campo. (Chequear con docentes)
+\item Pruebas de validación en campo.
 \end{itemize}
 
 
@@ -191,7 +184,7 @@ Para el desarrollo del presente proyecto se supone que:
 \item Se realizará un solo proceso de compra.
 \item Los sensores son todos con salida digital, se supone que no requieren un proceso de calibración y ajuste.
 \item La estructura de red WiFi existe y está en funcionamiento en la PyME.
-\item La cobertura de la red WiFi es la adecuada para la linea productiva de la PyME.
+\item La cobertura de la red WiFi es la adecuada para la línea productiva de la PyME.
 \end{itemize}
 
 \section{4. Requerimientos}
@@ -202,7 +195,7 @@ Requerimientos del proyecto:
 \begin{enumerate}
 \item Requerimientos de hardware del nodo:
 	\begin{enumerate}
-	\item Debe ser flexible a su fuente de alimentación, tensión máxima a soportar 24V.
+	\item Debe soportar tensiones de alimentación de 5 Vdc a 24 Vdc.
 	\item Debe basarse en el microcontrolador ESP8266 ó ESP32.
 	\item Debe tener puerto de I2C para conectar otros módulos de expansión.
 	\item Entradas:
@@ -255,16 +248,20 @@ Requerimientos del proyecto:
 	\item Selección y compra de componentes (20 hs)
 	\item Routeo PCB (40 hs)
 	\item Fabricación del PCB (30 hs)
-	\item Verificación y testing básico del prototipo (20hs)
+	\item Verificación y testing básico del prototipo (20 hs)
 	\end{enumerate}
 \item Desarrollo del firmware del nodo (210 hs)
 	\begin{enumerate}
-	\item Introducción a freeRTOS (50 hs)
+	\item Tests con freeRTOS (50 hs)
+		\begin{enumerate}
+		\item Generar tareas con los parámetros cargados desde un archivo JSON (25 hs)
+		\item Actualización de tareas con la actualización del archivo JSON (25 hs)
+		\end{enumerate}
 	\item Diseño de la arquitectura de software (20 hs)
 	\item Desarrollo de tareas para comunicación WiFi con broker de mensajería (20 hs)
 	\item Desarrollo de las tareas para gestión de sensores (40 hs)
 	\item Desarrollo de las tareas para gestión de puerto de expansión I2C (40 hs)
-	\item Integracion de todas las tareas desarrolladas (40 hs)
+	\item Integración de todas las tareas desarrolladas (40 hs)
 	\end{enumerate}
 \item Desarrollo del backend (240 hs)
 \begin{enumerate}
@@ -276,7 +273,7 @@ Requerimientos del proyecto:
 		\item Desarrollo bloque para comunicación con broker de mensajería (25 hs)
 		\item Desarrollo bloque para inserción de datos en la base de datos (25 hs)
 		\end{enumerate}
-	\item Instalación y configuración de grafana (20 hs)
+	\item Instalación y configuración de Grafana (20 hs)
 	\item Integración de los bloques desarrollados (40 hs)
 	\end{enumerate}
 \end{enumerate}
