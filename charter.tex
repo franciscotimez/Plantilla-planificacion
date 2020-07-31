@@ -14,7 +14,7 @@
 \autor{Francisco G. Timez} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
+\director{Marcelo Pistarelli}
 \pertenenciaDirector{pertenencia} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
@@ -34,7 +34,7 @@
  
 \fechaINICIO{22 de junio de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de diciembre de 2020}		%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{22 de Julio de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -66,6 +66,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.0      & Creación del documento                                                          & 22/06/2020 \\ \hline
 1.1      & Avances hasta capítulo 6. Desglose de tareas									   & 10/07/2020 \\ \hline
 1.2      & Se atendieron a las correcciones enviadas el día 14/07/2020                     & 15/07/2020 \\ \hline
+1.3      & Avances hasta capítulo 11. Matriz de asignación de responsabilidades.           & 30/07/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -222,6 +223,12 @@ Requerimientos del proyecto:
 	\end{enumerate}
 \end{enumerate}
 
+\section{Historias de usuarios (\textit{Product backlog})}
+\label{sec:backlog}
+
+\begin{consigna}{red}
+Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+\end{consigna}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -266,7 +273,8 @@ Requerimientos del proyecto:
 \item Desarrollo del backend (240 hs)
 \begin{enumerate}
 	\item Diseño de la arquitectura de software (40 hs)
-	\item Instalación de broker de mensajería (40 hs)
+	\item Instalación de broker de mensajería (20 hs)
+	\item Instalación de base de datos (20 hs)
 	\item Desarrollo software de backend (100 hs)
 		\begin{enumerate}
 		\item Introducción a NodeJS (50 hs)
@@ -280,197 +288,200 @@ Requerimientos del proyecto:
 
 Cantidad total de horas: (640 hs)
 
+\clearpage
+
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
+En el diagrama de Activity On Node se utiliza ``hora'' como unidad de tiempo y las flechas gruesas marcan el camino crítico del proyecto.
 
 %La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
 
 %\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
 
-\end{consigna}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=\textwidth]{./Figuras/AoN.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
-
+\clearpage
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
+En el diagrama de Gantt se supone que al proyecto se le dedicará 2 horas de trabajo por día, los 7 días de la semana. La cantidad de horas de trabajo por día es un estimativo promedio mensual. De esta forma la unidad de tiempo en el diagrama de Gantt es ``día''.
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=\textwidth]{./Figuras/TabGanttRedSensores.png}
+\caption{Diagrama de \textit{Gantt}}
+\label{fig:TabGantt}
 \end{figure}
 
-\end{consigna}
+\begin{figure}[htb]
+\centering 
+\includegraphics[angle=90, height=.96\textheight]{./Figuras/GanttRedSensores2.png}
+\caption{Diagrama de \textit{Gantt} (Gráfico)}
+\label{fig:Gantt}
+\end{figure}
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
 
-\begin{table}[htpb]
-\label{tab:recursos}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[ht]
 \centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|@{}}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|c|c|c|c|c|}
 \hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabularx}%
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}codigo \\ WBS\end{tabular}}} &
+  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Nombre tarea}} &
+  PC &
+  \begin{tabular}[c]{@{}c@{}}Raspberri\\ Pi\end{tabular} &
+  Laboratorio &
+  \begin{tabular}[c]{@{}c@{}}Kit de\\ desarrollo\end{tabular} &
+  PCB \\ \hline
+\rowcolor[HTML]{EFEFEF} 
+1     & Planificación del Proyecto                                           & \multicolumn{5}{c|}{\cellcolor[HTML]{EFEFEF}} \\ \hline
+1.1   & Elaboración del documento de planificación del proyecto              & 20      &         &         &        &        \\ \hline
+1.2   & Diseño de la arquitectura global del proyecto                        & 20      &         &         &        &        \\ \hline
+\rowcolor[HTML]{EFEFEF} 
+2     & Desarrollo del hardware del nodo                                     & \multicolumn{5}{c|}{\cellcolor[HTML]{EFEFEF}} \\ \hline
+2.1   & Diseño del diagrama esquemático                                      & 40      &         &         &        &        \\ \hline
+2.2   & Selección y compra de componentes                                    & 20      &         &         &        &        \\ \hline
+2.3   & Routeo PCB                                                           & 40      &         &         &        &        \\ \hline
+2.4   & Fabricación del PCB                                                  & 5       &         & 25      &        &        \\ \hline
+2.5   & Verificación y testing básico del prototipo                          & 20      &         & 20      &        &        \\ \hline
+\rowcolor[HTML]{EFEFEF} 
+3     & Desarrollo del firmware del nodo                                     & \multicolumn{5}{c|}{\cellcolor[HTML]{EFEFEF}} \\ \hline
+3.1   & Tests con freeRTOS                                                   & 50      &         &         & 50     &        \\ \hline
+3.2   & Diseño de la arquitectura de software                                & 20      &         &         &        &        \\ \hline
+3.3   & Desarrollo de tareas para comunicación WiFi con broker de mensajería & 20      & 20      &         &        &        \\ \hline
+3.4   & Desarrollo de las tareas para gestión de sensores                    & 40      &         &         & 40     &        \\ \hline
+3.5   & Desarrollo de las tareas para gestión de puerto de expansión I2C     & 40      &         &         & 40     &        \\ \hline
+3.6   & Integración de todas las tareas desarrolladas                        & 40      &         &         &        & 40     \\ \hline
+\rowcolor[HTML]{EFEFEF} 
+4     & Desarrollo del backend                                               & \multicolumn{5}{c|}{\cellcolor[HTML]{EFEFEF}} \\ \hline
+4.1   & Diseño de la arquitectura de software                                & 40      &         &         &        &        \\ \hline
+4.2   & Instalación de broker de mensajería                                  & 20      & 20      &         &        &        \\ \hline
+4.3   & Instalación de base de datos                                         & 20      & 20      &         &        &        \\ \hline
+4.4   & Desarrollo software de backend                                       & \multicolumn{5}{c|}{}                         \\ \hline
+4.4.1 & Introducción a NodeJS                                                & 50      &         &         &        &        \\ \hline
+4.4.2 & Desarrollo bloque para comunicación con broker de mensajería         & 25      & 25      &         &        &        \\ \hline
+4.4.3 & Desarrollo bloque para inserción de datos en la base de datos        & 25      & 25      &         &        &        \\ \hline
+4.5   & Instalación y configuración de Grafana                               & 20      & 20      &         &        &        \\ \hline
+4.6   & Integración de los bloques desarrollados                             & 40      & 40      &         &        & 40     \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+ &
+  Total de horas por recurso &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{9B9B9B}615} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{9B9B9B}170} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{9B9B9B}45} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{9B9B9B}130} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{9B9B9B}80} \\ \hline
+\end{tabular}%
+}
 \end{table}
 
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
-
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
+\resizebox{0.7\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS DIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
-\end{tabularx}%
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{4}{|l|}{\cellcolor[HTML]{9B9B9B}COSTOS DIRECTOS}      \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+Descripcion             & Cantidad & Valor unitario & Valor total  \\ \hline
+Trabajo directo         & 640 hs   & \$750,00       & \$480.000,00 \\ \hline
+Raspberry Pi            & 1        & \$15.000,00    & \$15.000,00  \\ \hline
+Fabricacion del PCB     & 10       & \$5.000,00     & \$50.000,00  \\ \hline
+Kit de desarrollo       & 2        & \$3.000,00     & \$6.000,00   \\ \hline
+\multicolumn{3}{|l|}{SUBTOTAL}                      & \$551.000,00 \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{4}{|l|}{\cellcolor[HTML]{9B9B9B}COSTOS INDIRECTOS}    \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+Descripcion             & Cantidad & Valor unitario & Valor total  \\ \hline
+30\% de trabajo directo & 192 hs   & \$750,00       & \$144.000,00 \\ \hline
+\multicolumn{3}{|l|}{SUBTOTAL}                      & \$144.000,00 \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{3}{|l|}{\cellcolor[HTML]{9B9B9B}TOTAL} & \$695.000,00 \\ \hline
+\end{tabular}%
+}
 \end{table}
-
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[htpb]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|l|l|c|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{9B9B9B}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{9B9B9B}} &
   Responsable &
   Orientador &
-  Equipo &
-  Cliente \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
-  \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
+  Cliente \\ \cline{3-5} 
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}codigo WBS}} &
+  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}Nombre tarea}} &
   \authorname &
   \supname &
-  Nombre de alguien &
   \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+1        & \multicolumn{4}{l|}{Planificación del Proyecto}                                   \\ \hline
+1.1      & Elaboración del documento de planificación del proyecto               & P & I & I \\ \hline
+1.2      & Diseño de la arquitectura global del proyecto                         & P & I & I \\ \hline
+2        & \multicolumn{4}{l|}{Desarrollo del hardware del nodo}                             \\ \hline
+2.1      & Diseño del diagrama esquemático                                       & P &   & C \\ \hline
+2.2      & Selección y compra de componentes                                     & P &   & C \\ \hline
+2.3      & Routeo PCB                                                            & P &   &   \\ \hline
+2.4      & Fabricación del PCB                                                   & P &   & I \\ \hline
+2.5      & Verificación y testing básico del prototipo                           & P &   & I \\ \hline
+3        & \multicolumn{4}{l|}{Desarrollo del firmware del nodo}                             \\ \hline
+3.1      & \multicolumn{4}{l|}{Tests con freeRTOS}                                           \\ \hline
+3.1.1	 & Generar tareas con los parámetros cargados desde un archivo JSON      & P &   &   \\ \hline
+3.1.2	 & Actualización de tareas con la actualización del archivo JSON         & P &   &   \\ \hline
+3.2      & Diseño de la arquitectura de software                                 & P & C &   \\ \hline
+3.3      & Desarrollo de tareas para comunicación WiFi con broker de mensajería & P & I &   \\ \hline
+3.4      & Desarrollo de las tareas para gestión de sensores                     & P & I &   \\ \hline
+3.5      & Desarrollo de las tareas para gestión de puerto de expansión I2C      & P & I &   \\ \hline
+3.6      & Integración de todas las tareas desarrolladas                         & P & I & I \\ \hline
+4        & \multicolumn{4}{l|}{Desarrollo del backend}                                       \\ \hline
+4.1      & Diseño de la arquitectura de software                                 & P & C &   \\ \hline
+4.2      & Instalación de broker de mensajería                                  & P &   &   \\ \hline
+4.3      & Instalación de base de datos                                          & P &   & C \\ \hline
+4.4      & \multicolumn{4}{l|}{Desarrollo software de backend}                               \\ \hline
+4.4.1    & Introducción a NodeJS                                                 & P &   &   \\ \hline
+4.4.2    & Desarrollo bloque para comunicación con broker de mensajería         & P &   &   \\ \hline
+4.4.3    & Desarrollo bloque para inserción de datos en la base de datos         & P &   &   \\ \hline
+4.5      & Instalación y configuración de Grafana                                & P &   & I \\ \hline
+4.6      & Integración de los bloques desarrollados                              & P & I & I \\ \hline
 \end{tabular}%
 }
 \end{table}
@@ -486,12 +497,6 @@ Referencias:
 \end{itemize}
 } %footnotesize
 
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
-
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
-
-\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
