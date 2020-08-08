@@ -15,7 +15,7 @@
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Marcelo Pistarelli}
-\pertenenciaDirector{pertenencia} 
+\pertenenciaDirector{UNR} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -67,6 +67,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.1      & Avances hasta capítulo 6. Desglose de tareas									   & 10/07/2020 \\ \hline
 1.2      & Se atendieron a las correcciones enviadas el día 14/07/2020                     & 15/07/2020 \\ \hline
 1.3      & Avances hasta capítulo 11. Matriz de asignación de responsabilidades.           & 30/07/2020 \\ \hline
+1.4      & Avances hasta capítulo 17. Procesos de cierre           						   & 08/08/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -193,6 +194,7 @@ Para el desarrollo del presente proyecto se supone que:
 
 Requerimientos del proyecto:
 
+
 \begin{enumerate}
 \item Requerimientos de hardware del nodo:
 	\begin{enumerate}
@@ -286,6 +288,7 @@ Descripción: En esta sección se deben incluir las historias de usuarios y su p
 	\end{enumerate}
 \end{enumerate}
 
+
 Cantidad total de horas: (640 hs)
 
 \clearpage
@@ -345,10 +348,10 @@ En el diagrama de Gantt se supone que al proyecto se le dedicará 2 horas de tra
 \multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &
   \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}codigo \\ WBS\end{tabular}}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}código \\ WBS\end{tabular}}} &
   \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Nombre tarea}} &
   PC &
-  \begin{tabular}[c]{@{}c@{}}Raspberri\\ Pi\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Raspberry\\ Pi\end{tabular} &
   Laboratorio &
   \begin{tabular}[c]{@{}c@{}}Kit de\\ desarrollo\end{tabular} &
   PCB \\ \hline
@@ -449,7 +452,7 @@ Descripcion             & Cantidad & Valor unitario & Valor total  \\ \hline
   Orientador &
   Cliente \\ \cline{3-5} 
 \rowcolor[HTML]{9B9B9B} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}codigo WBS}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}código WBS}} &
   \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}Nombre tarea}} &
   \authorname &
   \supname &
@@ -497,35 +500,46 @@ Referencias:
 \end{itemize}
 } %footnotesize
 
-
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+A continuación se describen los riesgos asociados al proyecto, junto con un plan de mitigación a los fines de reducir la probabilidad de errores.
+
+a) Identificación de los riesgos
+
 \begin{itemize}
-\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de severidad (S).
-\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+\item Riesgo 1: falta de tiempo para la finalización del proyecto.
+	\begin{itemize}
+	\item Severidad (5): implicaría no terminar la especialización en sistemas embebidos.
+	\item Probabilidad de ocurrencia (3): Se cuenta con una planificación detallada del proyecto. 
+	\end{itemize} 
 
-Riesgo 2:
-\begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
+\item Riesgo 2: retraso en el desarrollo de software de backend.
+	\begin{itemize}
+	\item Severidad (8): debido a la capacidad técnica actual, esto puede retrasar la finalización del proyecto.
+	\item Probabilidad de ocurrencia (10): alta debido a que no se posee experiencia en el desarrollo de software de backend. 
+	\end{itemize}
+	
+\item Riesgo 3: pérdida de archivos por falla, rotura o robo de las herramientas de desarrollo (Computadora Personal)
+	\begin{itemize}
+	\item Severidad (8): implicaría perder gran parte del trabajo, junto con su documentación.
+	\item Probabilidad de ocurrencia (5): probabilidad media debido a que me movilizo con la computadora por la ciudad y además tiene acumulada muchas horas de uso.
+	\end{itemize}
+	
+\item Riesgo 4: no conseguir los componentes necesarios para el proyecto.
+	\begin{itemize}
+	\item Severidad (5): implicaría volver a la etapa de diseño del PCB.
+	\item Probabilidad de ocurrencia (5): hay pocos importadores de componentes electrónicos en el país, y traer a pedido implica una demora no aceptable para el proyecto.
+	\end{itemize}
+	
+\item Riesgo 5: Falla en el PCB.
+	\begin{itemize}
+	\item Severidad (5): demoraría las pruebas de integración del proyecto.
+	\item Probabilidad de ocurrencia (5): Al ser de fabricación artesanal pueden ocurrir cortocircuitos en las pistas con elementos extraños o errores en el revelado del PCB. 
+	\end{itemize}
+\end{itemize} 
 
-Riesgo 3:
-\begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
-
-
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+b) Tabla de gestión de riesgos: (El RPN se calcula como RPN=SxO)
 
 \begin{table}[htpb]
 \centering
@@ -533,64 +547,147 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+Riesgo 1 & 5  & 3  & 15 &    &    &      \\ \hline
+Riesgo 2 & 8  & 10 & 80 & 4  & 5  & 20   \\ \hline
+Riesgo 3 & 8  & 5  & 40 & 2  & 5  & 10   \\ \hline
+Riesgo 4 & 5  & 5  & 25 &    &    &      \\ \hline
+Riesgo 5 & 5  & 5  & 25 &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a ....
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 30.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
+
+\begin{itemize}
+\item Riesgo 2: Se utilizará como recursos cursos virtuales en plataformas como udemy, Platzi, códigofacilito, EducaciónIT o similares.
+	\begin{itemize}
+	\item Severidad (4): se reduce la severidad debido a que se seguirá un plan de estudios, por lo tanto se reduce el tiempo de aprendizaje.
+	\item Probabilidad de ocurrencia (5): tener un plan de estudio reduce la probabilidad de ocurrencia ya que se generan objetivos intermedios agilizando la tarea. 
+	\end{itemize}
+\item Riesgo 3: Se utilizará un sistema de control de versiones en la nube, como por ejemplo Git y GitHub. Y se generarán alarmas para recordar de generar un guardado en la nube cada una semana.
+	\begin{itemize}
+	\item Severidad (2): luego de la mitigación se reduce notoriamente la severidad ya que se perderá como máximo el trabajo de una semana.
+	\item Probabilidad de ocurrencia (5): la probabilidad de ocurrencia se mantiene debido a que depende de factores externos. 
+	\end{itemize}
+\end{itemize}  
  
-Riesgo 1: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-
-Riesgo 2: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación)
-
-\end{consigna}
-
 
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: Copiar acá el requerimiento.
-
-Verificación y validación:
-
-\begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente:\\
-Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido:\\
-Detallar  
-\end{itemize}
-
-\end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, etc.
-
-\end{consigna}
+\begin{enumerate}
+\item Requerimientos de hardware del nodo:
+	\begin{enumerate}
+	\item Debe soportar tensiones de alimentación de 5 Vdc a 24 Vdc.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se obtendrán de las hojas de datos de los componentes reguladores las tensiones máximas admitidas. 
+		\item Validación: Se energizará el dispositivo con una fuente de corriente continua regulable, desde los 5Vdc hasta los 24Vdc en incrementos de 1V. 
+		\end{itemize}
+	\item Debe basarse en el microcontrolador ESP8266 ó ESP32.
+	\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se analizarán los costos y las características de cada microcontrolador y se elegirá el que mejor se ajuste al proyecto.
+		\item Validación: Se harán testeos con placas de desarrollo.
+		\end{itemize}
+	\item Debe tener puerto de I2C para conectar otros módulos de expansión.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se investigará documentación del protocolo I2C para implementarlo correctamente.
+		\item Validación: Se harán testeos con placas de desarrollo y dispositivos I2C.
+		\end{itemize}
+	\item Entradas:
+		\begin{enumerate}
+		\item Sensor de temperatura y humedad DHT22.
+			\\Verificación y validación:
+			\begin{itemize}
+			\item Verificación: Se analizará la hoja de datos del sensor verificando las condiciones de funcionamiento.
+			\item Validación: Se realizarán testeos del sensor.
+			\end{itemize}
+		\item Sensor de temperatura termopar K con MAX6675.
+			\\Verificación y validación:
+			\begin{itemize}
+			\item Verificación: Se analizará la hoja de datos del CI conversor verificando las condiciones de funcionamiento.
+			\item Validación: Se realizarán testeos con distintas termocuplas comparando las mediciones con sensores digitales como Ds18b20.
+			\end{itemize}
+		\item Al menos una entrada para sensores con salida relé o transistorizados NPN.
+			\\Verificación y validación:
+			\begin{itemize}
+			\item Verificación: Se analizarán distintos tipos de sensores para verificar las condiciones de funcionamiento.
+			\item Validación: Se harán testeos con sensores industriales disponibles.
+			\end{itemize}
+		\end{enumerate}
+	\end{enumerate}
+\item Requerimientos de firmware del nodo:
+	\begin{enumerate}
+	\item Comunicación WiFi y por protocolo MQTT.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se verifica mediante la hoja de datos del dispositivo y documentación necesaria.
+		\item Validación: Se harán testeos enviando y recibiendo datos.
+		\end{itemize}
+	\item Se debe poder configurar los sensores mediante un archivo JSON, con posibilidad de actualización mediante OTA.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se construye un archivo JSON que contemple las configuraciones necesarias para las tareas.
+		\item Validación: Se harán testeos con creando, actualizando y borrando tareas.
+		\end{itemize}
+	\item Se debe soportar actualización del firmware mediante OTA.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se analizará la documentación para la implementación de OTA por HTTP.
+		\item Validación: Se harán testeos de actualización de firmware.
+		\end{itemize}
+	\item Se debe soportar el módulo de expansión PCF8574.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se analizará la hoja de datos del chip y se comprobará sus condiciones de funcionamiento.
+		\item Validación: Se harán testeos con al menos un modulo de expansión.
+		\end{itemize}
+	\end{enumerate}
+\item Requerimientos de software backend:
+	\begin{enumerate}
+	\item Todos los servicios deben correr en una Raspberry Pi 3 o 4.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se verificará en la documentación adecuada si los servicios necesarios pueden ejecutarse en la plataforma.
+		\item Validación: Se realizarán tests de cada servicio en forma individual y luego en forma integrada.
+		\end{itemize}
+	\item Broker MQTT alojado en red local.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se verificará en documentación adecuada la implementación en red local.
+		\item Validación: Se enviarán y recibirán mensajes desde la consola de comandos a través del broker.
+		\end{itemize}
+	\item Backend basado en Node-RED o NodeJS.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se consultará a expertos o en documentación adecuada para la implementación.
+		\item Validación: Se enviarán datos al backend para que los guarde en la base de datos y luego se consultaran esos datos con otra petición al backend.
+		\end{itemize}
+	\item Generación de tablas en base de datos SQL, según configuración del nodo.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se analizará la estructura de las tablas y se propondrá una estructura unificada.
+		\item Validación: Se crearán tablas en forma automática según un archivo JSON de configuración.
+		\end{itemize}
+	\item Dashboard web de variables sensadas mediante Grafana.
+		\\Verificación y validación:
+		\begin{itemize}
+		\item Verificación: Se consultará la documentación para generar las pantallas adecuadas.
+		\item Validación: Se generaran dashboards con los gráficos necesarios para ver los datos enviados por un nodo.
+		\end{itemize}
+	\end{enumerate}
+\end{enumerate}
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
 
-\begin{consigna}{red}
 El plan de comunicación del proyecto es el siguiente:
-\end{consigna}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -601,15 +698,39 @@ El plan de comunicación del proyecto es el siguiente:
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{9B9B9B}PLAN DE COMUNICACION DEL PROYECTO} \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{9B9B9B}¿Qué comunicar?} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{9B9B9B}Audiencia} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{9B9B9B}Propósito} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{9B9B9B}Frecuencia} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{9B9B9B}\begin{tabular}[c]{@{}l@{}}Método de\\ comunicación\end{tabular}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{9B9B9B}Responsable} \\ \hline
+\begin{tabular}[c]{@{}c@{}}Definición \\ de alcance y objetivos.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Director \\ y cliente.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Evaluación \\ y sugerencias.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Inicio del \\ proyecto.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Correo \\ electrónico.\end{tabular} &
+  \authorname \\ \hline
+Avances generales. &
+  Director. &
+  \begin{tabular}[c]{@{}c@{}}Recibir comentarios \\ y recomendaciones.\end{tabular} &
+  Quincenal. &
+  \begin{tabular}[c]{@{}c@{}}Correo \\ electrónico.\end{tabular} &
+  \authorname \\ \hline
+Informe de avance. &
+  \begin{tabular}[c]{@{}c@{}}Director \\ y cliente.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Informar el estado \\ del proyecto.\end{tabular} &
+  Unica vez. &
+  \begin{tabular}[c]{@{}c@{}}Correo \\ electrónico.\end{tabular} &
+  \authorname \\ \hline
+Finalizacion y cierre. &
+  \begin{tabular}[c]{@{}c@{}}Director \\ y jurado.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Evaluación y finalización \\ del proyecto.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Final del \\ proyecto.\end{tabular} &
+  Reunión. &
+  \authorname \\ \hline
 \end{tabular}%
 }
 \end{table}
@@ -617,55 +738,65 @@ El plan de comunicación del proyecto es el siguiente:
 \section{15. Gestión de Compras}
 \label{sec:compras}
 
-\begin{consigna}{red}
-En caso de tener que comprar elementos o contratar servicios:
-a) Explique con qué criterios elegiría a un proveedor.
-b) Redacte el Statement of Work correspondiente.
-\end{consigna}
+Para la compra de componentes electrónicos se considerará únicamente proveedores nacionales, y en situaciones particulares y a evaluar, según la situación, a proveedores internacionales. Se toma esta decisión en base a que en caso de falla o en caso de requerirse más de un prototipo se debe poder dar una respuesta en menos de 15 días.
 
 \section{16. Seguimiento y control}
 \label{sec:seguimiento}
 
-\begin{consigna}{red}
-Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
-
-El indicador de avance tiene que ser algo medible, mejor incluso si se puede medir en \% de avance. Por ejemplo,se pueden indicar en esta columna cosas como ``cantidad de conexiones ruteadeas'' o ``cantidad de funciones implementadas'', pero no algo genérico y ambiguo como ``\%'', porque el lector no sabe porcentaje de qué cosa.
-
-\end{consigna}
-
-\begin{table}[!htpb]
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabularx}%
-%}
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{9B9B9B}SEGUIMIENTO DE AVANCE}                                                             \\ \hline
+\rowcolor[HTML]{9B9B9B} 
+\begin{tabular}[c]{@{}c@{}}código\\ WBS\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Indicador \\ de avance\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Frecuencia \\ del reporte\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Resp. del \\ seguimiento\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Persona a \\ ser informada\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Método de \\ comunicación\end{tabular} \\ \hline
+1 &
+  \begin{tabular}[c]{@{}c@{}}Versiones del documento\\ de planificación.\end{tabular} &
+  Semanal. &
+  \authorname &
+  \begin{tabular}[c]{@{}c@{}}Director y\\ docentes CESE.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Correo\\ electrónico.\end{tabular} \\ \hline
+2 & Sub-tarea finalizada. & Quincenal. & \authorname & Director. & \begin{tabular}[c]{@{}c@{}}Correo\\ electrónico.\end{tabular} \\ \hline
+3 & Sub-tarea finalizada. & Quincenal. & \authorname & Director. & \begin{tabular}[c]{@{}c@{}}Correo\\ electrónico.\end{tabular} \\ \hline
+4 & Sub-tarea finalizada. & Quincenal. & \authorname & Director. & \begin{tabular}[c]{@{}c@{}}Correo\\ electrónico.\end{tabular} \\ \hline
+\end{tabular}%
+}
 \end{table}
 
 \section{17. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
 Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
 
 \begin{itemize}
-\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-  - Indicar esto y quién financiará los gastos correspondientes.
+\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
+Encargado: \authorname . 
+	\begin{itemize}
+	\item Se evaluarán los requerimientos y los objetivos alcanzados en el prototipo en comparación con los planteados en el plan original.
+	\item Se avaluará los tiempos de ejecución real de las tareas junto con los planteados en el diagrama de Gantt.
+	\end{itemize}
+\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:\\
+Encargado: \authorname .
+	\begin{itemize}
+	\item Se evaluará el impacto de las herramientas proporcionadas por la CESE en el desarrollo del proyecto.
+	\item En caso de surgir problemas se evaluará la idea original, porqué no resultó adecuada, y la solución ejecutada.
+	\end{itemize}
+\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
+Encargado: \authorname .
+	\begin{itemize}
+	\item Se realizará un agradecimiento a todos los colaboradores directos e indirectos del proyecto, director, jurados, compañeros, docentes y autoridades de la Carrera de Especialización en Sistemas Embebidos.
+	\end{itemize}
 \end{itemize}
-
-\end{consigna}
-
 
 \end{document}
