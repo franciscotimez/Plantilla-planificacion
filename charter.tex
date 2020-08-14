@@ -66,8 +66,9 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.0      & Creación del documento                                                          & 22/06/2020 \\ \hline
 1.1      & Avances hasta capítulo 6. Desglose de tareas									   & 10/07/2020 \\ \hline
 1.2      & Se atendieron a las correcciones enviadas el día 14/07/2020                     & 15/07/2020 \\ \hline
-1.3      & Avances hasta capítulo 11. Matriz de asignación de responsabilidades.           & 30/07/2020 \\ \hline
-1.4      & Avances hasta capítulo 17. Procesos de cierre           						   & 08/08/2020 \\ \hline
+1.3      & Avances hasta capítulo 11. Matriz de asignación de responsabilidades            & 30/07/2020 \\ \hline
+1.4      & Avances hasta capítulo 17. Procesos de cierre          						   & 08/08/2020 \\ \hline
+1.5      & Se atendieron a las correcciones enviadas el día 09/08/2020. Se agregan historias de usuario.	& 14/08/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -227,10 +228,50 @@ Requerimientos del proyecto:
 
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
+Las siguientes historias de usuario se utiliza el siguiente criterio:
+\begin{itemize}
+\item Ponderación: 1 esfuerzo bajo, 3 esfuerzo moderado, 7 esfuerzo alto.
+\item Prioridad: 1 alta, 2 media, 3 baja.
+\end{itemize}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-\end{consigna}
+Como gerente, quiero ver en una pantalla dos datos de los sensores.
+\begin{itemize}
+\item Ponderación: 1.
+\item Prioridad: 3.
+\end{itemize}
+
+Como técnico, quiero configurar el nodo con un archivo de texto.
+\begin{itemize}
+\item Ponderación: 7.
+\item Prioridad: 2.
+\end{itemize}
+
+Como técnico, quiero actualizar la configuración del nodo con un archivo de texto.
+\begin{itemize}
+\item Ponderación: 7.
+\item Prioridad: 3.
+\end{itemize}
+
+Como técnico, quiero conectar una termocupla tipo K al nodo.
+\begin{itemize}
+\item Ponderación: 3.
+\item Prioridad: 1.
+\end{itemize}
+
+Como técnico, quiero conectar un sensor de temperatura y humedad al nodo.
+\begin{itemize}
+\item Ponderación: 1.
+\item Prioridad: 1.
+\end{itemize}
+
+Como técnico, quiero agregar mas entradas tipo switch al nodo.
+\begin{itemize}
+\item Ponderación: 7.
+\item Prioridad: 2.
+\end{itemize}
+
+
+
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -452,20 +493,20 @@ Descripcion             & Cantidad & Valor unitario & Valor total  \\ \hline
   Orientador &
   Cliente \\ \cline{3-5} 
 \rowcolor[HTML]{9B9B9B} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}código WBS}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}\begin{tabular}[c]{@{}c@{}}código\\ WBS\end{tabular}}} &
   \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{9B9B9B}Nombre tarea}} &
-  \authorname &
-  \supname &
-  \clientename \\ \hline
+  \begin{tabular}[c]{@{}c@{}}Francisco\\Timez\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Marcelo\\Pistarelli\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Pablo\\Scherf\end{tabular}\\ \hline
 1        & \multicolumn{4}{l|}{Planificación del Proyecto}                                   \\ \hline
-1.1      & Elaboración del documento de planificación del proyecto               & P & I & I \\ \hline
+1.1      & Elaboración del documento de planificación del proyecto               & P & A & I \\ \hline
 1.2      & Diseño de la arquitectura global del proyecto                         & P & I & I \\ \hline
 2        & \multicolumn{4}{l|}{Desarrollo del hardware del nodo}                             \\ \hline
 2.1      & Diseño del diagrama esquemático                                       & P &   & C \\ \hline
-2.2      & Selección y compra de componentes                                     & P &   & C \\ \hline
+2.2      & Selección y compra de componentes                                     & P &   & A \\ \hline
 2.3      & Routeo PCB                                                            & P &   &   \\ \hline
 2.4      & Fabricación del PCB                                                   & P &   & I \\ \hline
-2.5      & Verificación y testing básico del prototipo                           & P &   & I \\ \hline
+2.5      & Verificación y testing básico del prototipo                           & P &   & A \\ \hline
 3        & \multicolumn{4}{l|}{Desarrollo del firmware del nodo}                             \\ \hline
 3.1      & \multicolumn{4}{l|}{Tests con freeRTOS}                                           \\ \hline
 3.1.1	 & Generar tareas con los parámetros cargados desde un archivo JSON      & P &   &   \\ \hline
@@ -483,7 +524,7 @@ Descripcion             & Cantidad & Valor unitario & Valor total  \\ \hline
 4.4.1    & Introducción a NodeJS                                                 & P &   &   \\ \hline
 4.4.2    & Desarrollo bloque para comunicación con broker de mensajería         & P &   &   \\ \hline
 4.4.3    & Desarrollo bloque para inserción de datos en la base de datos         & P &   &   \\ \hline
-4.5      & Instalación y configuración de Grafana                                & P &   & I \\ \hline
+4.5      & Instalación y configuración de Grafana                                & P &   & A \\ \hline
 4.6      & Integración de los bloques desarrollados                              & P & I & I \\ \hline
 \end{tabular}%
 }
@@ -510,8 +551,8 @@ a) Identificación de los riesgos
 \begin{itemize}
 \item Riesgo 1: falta de tiempo para la finalización del proyecto.
 	\begin{itemize}
-	\item Severidad (5): implicaría no terminar la especialización en sistemas embebidos.
-	\item Probabilidad de ocurrencia (3): Se cuenta con una planificación detallada del proyecto. 
+	\item Severidad (9): implicaría no terminar la especialización en sistemas embebidos.
+	\item Probabilidad de ocurrencia (3): se cuenta con una planificación detallada del proyecto. 
 	\end{itemize} 
 
 \item Riesgo 2: retraso en el desarrollo de software de backend.
@@ -532,10 +573,10 @@ a) Identificación de los riesgos
 	\item Probabilidad de ocurrencia (5): hay pocos importadores de componentes electrónicos en el país, y traer a pedido implica una demora no aceptable para el proyecto.
 	\end{itemize}
 	
-\item Riesgo 5: Falla en el PCB.
+\item Riesgo 5: falla en el PCB.
 	\begin{itemize}
 	\item Severidad (5): demoraría las pruebas de integración del proyecto.
-	\item Probabilidad de ocurrencia (5): Al ser de fabricación artesanal pueden ocurrir cortocircuitos en las pistas con elementos extraños o errores en el revelado del PCB. 
+	\item Probabilidad de ocurrencia (5): al ser de fabricación artesanal pueden ocurrir cortocircuitos en las pistas con elementos extraños o errores en el revelado del PCB. 
 	\end{itemize}
 \end{itemize} 
 
@@ -547,11 +588,11 @@ b) Tabla de gestión de riesgos: (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-Riesgo 1 & 5  & 3  & 15 &    &    &      \\ \hline
-Riesgo 2 & 8  & 10 & 80 & 4  & 5  & 20   \\ \hline
-Riesgo 3 & 8  & 5  & 40 & 2  & 5  & 10   \\ \hline
-Riesgo 4 & 5  & 5  & 25 &    &    &      \\ \hline
-Riesgo 5 & 5  & 5  & 25 &    &    &      \\ \hline
+Riesgo 1: falta de tiempo para la finalización del proyecto. & 9  & 3  & 27 &    &    &      \\ \hline
+Riesgo 2: retraso en el desarrollo de software de backend. & 8  & 10 & 80 & 4  & 5  & 20   \\ \hline
+Riesgo 3: pérdida de archivos por falla, rotura o robo de las herramientas de desarrollo (Computadora Personal) & 8  & 5  & 40 & 2  & 5  & 10   \\ \hline
+Riesgo 4: no conseguir los componentes necesarios para el proyecto. & 5  & 5  & 25 &    &    &      \\ \hline
+Riesgo 5: falla en el PCB. & 5  & 5  & 25 &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -563,12 +604,12 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
 
 \begin{itemize}
-\item Riesgo 2: Se utilizará como recursos cursos virtuales en plataformas como udemy, Platzi, códigofacilito, EducaciónIT o similares.
+\item Riesgo 2: se utilizará como recursos cursos virtuales en plataformas como udemy, Platzi, códigofacilito, EducaciónIT o similares.
 	\begin{itemize}
 	\item Severidad (4): se reduce la severidad debido a que se seguirá un plan de estudios, por lo tanto se reduce el tiempo de aprendizaje.
 	\item Probabilidad de ocurrencia (5): tener un plan de estudio reduce la probabilidad de ocurrencia ya que se generan objetivos intermedios agilizando la tarea. 
 	\end{itemize}
-\item Riesgo 3: Se utilizará un sistema de control de versiones en la nube, como por ejemplo Git y GitHub. Y se generarán alarmas para recordar de generar un guardado en la nube cada una semana.
+\item Riesgo 3: se utilizará un sistema de control de versiones en la nube, como por ejemplo Git y GitHub. Y se generarán alarmas para recordar de generar un guardado en la nube cada una semana.
 	\begin{itemize}
 	\item Severidad (2): luego de la mitigación se reduce notoriamente la severidad ya que se perderá como máximo el trabajo de una semana.
 	\item Probabilidad de ocurrencia (5): la probabilidad de ocurrencia se mantiene debido a que depende de factores externos. 
@@ -585,40 +626,40 @@ c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo
 	\item Debe soportar tensiones de alimentación de 5 Vdc a 24 Vdc.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se obtendrán de las hojas de datos de los componentes reguladores las tensiones máximas admitidas. 
-		\item Validación: Se energizará el dispositivo con una fuente de corriente continua regulable, desde los 5Vdc hasta los 24Vdc en incrementos de 1V. 
+		\item Verificación: se obtendrán de las hojas de datos de los componentes reguladores las tensiones máximas admitidas. 
+		\item Validación: se energizará el dispositivo con una fuente de corriente continua regulable, desde los 5Vdc hasta los 24Vdc en incrementos de 1V. 
 		\end{itemize}
 	\item Debe basarse en el microcontrolador ESP8266 ó ESP32.
 	\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se analizarán los costos y las características de cada microcontrolador y se elegirá el que mejor se ajuste al proyecto.
-		\item Validación: Se harán testeos con placas de desarrollo.
+		\item Verificación: se analizarán los costos y las características de cada microcontrolador y se elegirá el que mejor se ajuste al proyecto.
+		\item Validación: se harán testeos con placas de desarrollo.
 		\end{itemize}
 	\item Debe tener puerto de I2C para conectar otros módulos de expansión.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se investigará documentación del protocolo I2C para implementarlo correctamente.
-		\item Validación: Se harán testeos con placas de desarrollo y dispositivos I2C.
+		\item Verificación: se investigará documentación del protocolo I2C para implementarlo correctamente.
+		\item Validación: se harán testeos con placas de desarrollo y dispositivos I2C.
 		\end{itemize}
 	\item Entradas:
 		\begin{enumerate}
 		\item Sensor de temperatura y humedad DHT22.
 			\\Verificación y validación:
 			\begin{itemize}
-			\item Verificación: Se analizará la hoja de datos del sensor verificando las condiciones de funcionamiento.
-			\item Validación: Se realizarán testeos del sensor.
+			\item Verificación: se analizará la hoja de datos del sensor verificando las condiciones de funcionamiento.
+			\item Validación: se realizarán testeos del sensor.
 			\end{itemize}
 		\item Sensor de temperatura termopar K con MAX6675.
 			\\Verificación y validación:
 			\begin{itemize}
-			\item Verificación: Se analizará la hoja de datos del CI conversor verificando las condiciones de funcionamiento.
-			\item Validación: Se realizarán testeos con distintas termocuplas comparando las mediciones con sensores digitales como Ds18b20.
+			\item Verificación: se analizará la hoja de datos del CI conversor verificando las condiciones de funcionamiento.
+			\item Validación: se realizarán testeos con distintas termocuplas comparando las mediciones con sensores digitales como Ds18b20.
 			\end{itemize}
 		\item Al menos una entrada para sensores con salida relé o transistorizados NPN.
 			\\Verificación y validación:
 			\begin{itemize}
-			\item Verificación: Se analizarán distintos tipos de sensores para verificar las condiciones de funcionamiento.
-			\item Validación: Se harán testeos con sensores industriales disponibles.
+			\item Verificación: se analizarán distintos tipos de sensores para verificar las condiciones de funcionamiento.
+			\item Validación: se harán testeos con sensores industriales disponibles.
 			\end{itemize}
 		\end{enumerate}
 	\end{enumerate}
@@ -627,26 +668,26 @@ c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo
 	\item Comunicación WiFi y por protocolo MQTT.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se verifica mediante la hoja de datos del dispositivo y documentación necesaria.
-		\item Validación: Se harán testeos enviando y recibiendo datos.
+		\item Verificación: se verifica mediante la hoja de datos del dispositivo y documentación necesaria.
+		\item Validación: se harán testeos enviando y recibiendo datos.
 		\end{itemize}
 	\item Se debe poder configurar los sensores mediante un archivo JSON, con posibilidad de actualización mediante OTA.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se construye un archivo JSON que contemple las configuraciones necesarias para las tareas.
-		\item Validación: Se harán testeos con creando, actualizando y borrando tareas.
+		\item Verificación: se construye un archivo JSON que contemple las configuraciones necesarias para las tareas.
+		\item Validación: se harán testeos con creando, actualizando y borrando tareas.
 		\end{itemize}
 	\item Se debe soportar actualización del firmware mediante OTA.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se analizará la documentación para la implementación de OTA por HTTP.
-		\item Validación: Se harán testeos de actualización de firmware.
+		\item Verificación: se analizará la documentación para la implementación de OTA por HTTP.
+		\item Validación: se harán testeos de actualización de firmware.
 		\end{itemize}
 	\item Se debe soportar el módulo de expansión PCF8574.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se analizará la hoja de datos del chip y se comprobará sus condiciones de funcionamiento.
-		\item Validación: Se harán testeos con al menos un modulo de expansión.
+		\item Verificación: se analizará la hoja de datos del chip y se comprobará sus condiciones de funcionamiento.
+		\item Validación: se harán testeos con al menos un modulo de expansión.
 		\end{itemize}
 	\end{enumerate}
 \item Requerimientos de software backend:
@@ -654,32 +695,32 @@ c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo
 	\item Todos los servicios deben correr en una Raspberry Pi 3 o 4.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se verificará en la documentación adecuada si los servicios necesarios pueden ejecutarse en la plataforma.
-		\item Validación: Se realizarán tests de cada servicio en forma individual y luego en forma integrada.
+		\item Verificación: se verificará en la documentación adecuada si los servicios necesarios pueden ejecutarse en la plataforma.
+		\item Validación: se realizarán tests de cada servicio en forma individual y luego en forma integrada.
 		\end{itemize}
 	\item Broker MQTT alojado en red local.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se verificará en documentación adecuada la implementación en red local.
-		\item Validación: Se enviarán y recibirán mensajes desde la consola de comandos a través del broker.
+		\item Verificación: se verificará en documentación adecuada la implementación en red local.
+		\item Validación: se enviarán y recibirán mensajes desde la consola de comandos a través del broker.
 		\end{itemize}
 	\item Backend basado en Node-RED o NodeJS.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se consultará a expertos o en documentación adecuada para la implementación.
-		\item Validación: Se enviarán datos al backend para que los guarde en la base de datos y luego se consultaran esos datos con otra petición al backend.
+		\item Verificación: se consultará a expertos o en documentación adecuada para la implementación.
+		\item Validación: se enviarán datos al backend para que los guarde en la base de datos y luego se consultaran esos datos con otra petición al backend.
 		\end{itemize}
 	\item Generación de tablas en base de datos SQL, según configuración del nodo.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se analizará la estructura de las tablas y se propondrá una estructura unificada.
-		\item Validación: Se crearán tablas en forma automática según un archivo JSON de configuración.
+		\item Verificación: se analizará la estructura de las tablas y se propondrá una estructura unificada.
+		\item Validación: se crearán tablas en forma automática según un archivo JSON de configuración.
 		\end{itemize}
 	\item Dashboard web de variables sensadas mediante Grafana.
 		\\Verificación y validación:
 		\begin{itemize}
-		\item Verificación: Se consultará la documentación para generar las pantallas adecuadas.
-		\item Validación: Se generaran dashboards con los gráficos necesarios para ver los datos enviados por un nodo.
+		\item Verificación: se consultará la documentación para generar las pantallas adecuadas.
+		\item Validación: se generarán dashboards con los gráficos necesarios para ver los datos enviados por un nodo.
 		\end{itemize}
 	\end{enumerate}
 \end{enumerate}
@@ -699,7 +740,7 @@ El plan de comunicación del proyecto es el siguiente:
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{9B9B9B} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{9B9B9B}PLAN DE COMUNICACION DEL PROYECTO} \\ \hline
+\multicolumn{6}{|c|}{\cellcolor[HTML]{9B9B9B}PLAN DE COMUNICACIÓN DEL PROYECTO} \\ \hline
 \rowcolor[HTML]{9B9B9B} 
 \multicolumn{1}{|l|}{\cellcolor[HTML]{9B9B9B}¿Qué comunicar?} &
   \multicolumn{1}{l|}{\cellcolor[HTML]{9B9B9B}Audiencia} &
@@ -722,10 +763,10 @@ Avances generales. &
 Informe de avance. &
   \begin{tabular}[c]{@{}c@{}}Director \\ y cliente.\end{tabular} &
   \begin{tabular}[c]{@{}c@{}}Informar el estado \\ del proyecto.\end{tabular} &
-  Unica vez. &
+  Única vez. &
   \begin{tabular}[c]{@{}c@{}}Correo \\ electrónico.\end{tabular} &
   \authorname \\ \hline
-Finalizacion y cierre. &
+Finalización y cierre. &
   \begin{tabular}[c]{@{}c@{}}Director \\ y jurado.\end{tabular} &
   \begin{tabular}[c]{@{}c@{}}Evaluación y finalización \\ del proyecto.\end{tabular} &
   \begin{tabular}[c]{@{}c@{}}Final del \\ proyecto.\end{tabular} &
@@ -780,20 +821,17 @@ Para la compra de componentes electrónicos se considerará únicamente proveedo
 Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
 
 \begin{itemize}
-\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-Encargado: \authorname . 
+\item Pautas de trabajo que se seguirán para analizar si se respetó el plan de proyecto original, el encargado de la tarea es Francisco Timez. 
 	\begin{itemize}
 	\item Se evaluarán los requerimientos y los objetivos alcanzados en el prototipo en comparación con los planteados en el plan original.
-	\item Se avaluará los tiempos de ejecución real de las tareas junto con los planteados en el diagrama de Gantt.
+	\item Se avaluarán los tiempos de ejecución real de las tareas junto con los planteados en el diagrama de Gantt.
 	\end{itemize}
-\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:\\
-Encargado: \authorname .
+\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron, el encargado de la tarea es Francisco Timez.
 	\begin{itemize}
 	\item Se evaluará el impacto de las herramientas proporcionadas por la CESE en el desarrollo del proyecto.
-	\item En caso de surgir problemas se evaluará la idea original, porqué no resultó adecuada, y la solución ejecutada.
+	\item En caso de surgir problemas se evaluará la idea original, por qué no resultó adecuada, y la solución ejecutada.
 	\end{itemize}
-\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-Encargado: \authorname .
+\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores, el encargado de la tarea es Francisco Timez.
 	\begin{itemize}
 	\item Se realizará un agradecimiento a todos los colaboradores directos e indirectos del proyecto, director, jurados, compañeros, docentes y autoridades de la Carrera de Especialización en Sistemas Embebidos.
 	\end{itemize}
